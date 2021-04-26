@@ -13,3 +13,10 @@ steps:
     sdk: 'iphoneos'
     configuration: 'Release'
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+    
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 
+    #certPwd: # Optional
+    keychain: 'temp' # Options: default, temp, custom
+    keychainPassword: 'qwerty123'
