@@ -6,6 +6,9 @@
 pool:
   vmImage: 'macOS 10.14'
 
+variables:
+  - group: iOS_calc
+
 steps:
 - task: Xcode@5
   inputs:
@@ -16,7 +19,7 @@ steps:
     
 - task: InstallAppleCertificate@2
   inputs:
-    certSecureFile: 
-    #certPwd: # Optional
+    certSecureFile: '$(p12name)'
+    certPwd: '$(p12pass)'
     keychain: 'temp' # Options: default, temp, custom
-    keychainPassword: 'qwerty123'
+    deleteCert: true
