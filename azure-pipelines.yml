@@ -27,12 +27,6 @@ jobs:
       configuration: 'Release'
       xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
       
-  - task: VSBuild@1
-    inputs:
-      solution: '$(solution)'
-      msbuildArgs: '/p:OutputPath=$(Build.ArtifactStagingDirectory)'
-      platform: '$(buildPlatform)'
-      configuration: '$(buildConfiguration)'
     
   - task: InstallAppleCertificate@2
     inputs:
