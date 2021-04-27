@@ -21,7 +21,7 @@ steps:
 - task: Xcode@5
   inputs:
     xcWorkspacePath: 'SwiftCalculator-master/Calculator.xcworkspace'
-    scheme: ''
+    scheme: 'Calculator'
     sdk: 'iphoneos'
     configuration: 'Release'
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
