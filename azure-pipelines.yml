@@ -32,3 +32,24 @@ steps:
     certPwd: '$(p12pass)'
     keychain: 'temp' # Options: default, temp, custom
     deleteCert: true
+    
+# App Center distribute
+# Distribute app builds to testers and users via Visual Studio App Center
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'VSAC'
+    appSlug: 'mjasha/Simple-Calculator'
+    appFile: 'build/Calculator.ipa'
+    #symbolsOption: 'Apple' # Optional. Options: apple, android
+    #symbolsPath: # Optional
+    #symbolsPdbFiles: '**/*.pdb' # Optional
+    #symbolsDsymFiles: # Optional
+    #symbolsIncludeParentDirectory: # Optional
+    releaseNotesOption: 'input' # Options: input, file
+    releaseNotesInput: 'This is simple calculator' # Required when releaseNotesOption == Input
+    #releaseNotesFile: # Required when releaseNotesOption == File
+    isMandatory: true # Optional
+    destinationType: 'groups' # Options: groups, store
+    distributionGroupId: '0398fe91-8d72-4af4-8aed-9e9b8757d985' # Optional
+    #destinationStoreId: # Required when destinationType == store
+    #isSilent: # Optional
