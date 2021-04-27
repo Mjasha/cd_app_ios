@@ -15,7 +15,7 @@ variables:
 steps:
 
 - script: |
-  pod install
+    pod install
   displayName: 'Install AppCenter'
 
 - task: Xcode@5
