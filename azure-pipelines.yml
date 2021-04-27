@@ -12,9 +12,9 @@ pool:
 variables:
   - group: iOS_calc
 
+jobs:
 - job: build
   displayName: Building .ipa
-  dependsOn: test
   steps:
   - script: pod install --project-directory=SwiftCalculator-master
     displayName: 'Install AppCenter'
