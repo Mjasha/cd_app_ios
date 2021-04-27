@@ -9,6 +9,6 @@ target 'Calculator' do
 
 pod 'AppCenter'
 
-
+project 'SwiftCalculator-master/Calculator.xcodeproj'
 
 end
