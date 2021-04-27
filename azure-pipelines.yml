@@ -13,6 +13,11 @@ variables:
   - group: iOS_calc
 
 steps:
+
+- script:
+  pod install
+  displayName: 'Install AppCenter'
+
 - task: Xcode@5
   inputs:
     scheme: ''
