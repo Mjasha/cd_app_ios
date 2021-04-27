@@ -32,16 +32,3 @@ steps:
     certPwd: '$(p12pass)'
     keychain: 'temp' # Options: default, temp, custom
     deleteCert: true
-
-# App Center distribute
- # Distribute app builds to testers and users via Visual Studio App Center
- - task: AppCenterDistribute@3
-  inputs:
-    serverEndpoint: 'VSAC'
-    appSlug: 'mjasha/Simple-Calculator'
-    appFile: 'Calculator.app'
-    releaseNotesOption: 'input'
-    releaseNotesInput: 'This is simple calculator'
-    isMandatory: true
-    destinationType: 'groups'
-    distributionGroupId: '0398fe91-8d72-4af4-8aed-9e9b8757d985'
