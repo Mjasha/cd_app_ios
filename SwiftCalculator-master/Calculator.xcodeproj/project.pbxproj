@@ -13,9 +13,11 @@
 		835DC90323EF36D600DC0490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835DC90123EF36D600DC0490 /* Main.storyboard */; };
 		835DC90523EF36D700DC0490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835DC90423EF36D700DC0490 /* Assets.xcassets */; };
 		835DC90823EF36D700DC0490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835DC90623EF36D700DC0490 /* LaunchScreen.storyboard */; };
+		D23C6530F1BB6C4B67E3BD77 /* Pods_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAEC366BA7CD9CE273BEF49 /* Pods_Calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C31FAFF50EA08B79E1D0559 /* Pods-Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator.release.xcconfig"; path = "Target Support Files/Pods-Calculator/Pods-Calculator.release.xcconfig"; sourceTree = "<group>"; };
 		835DC8F823EF36D600DC0490 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835DC8FB23EF36D600DC0490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		835DC8FD23EF36D600DC0490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		835DC90423EF36D700DC0490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		835DC90723EF36D700DC0490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		835DC90923EF36D700DC0490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B344EE68ECC9E3D98DD29B9F /* Pods-Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator.debug.xcconfig"; path = "Target Support Files/Pods-Calculator/Pods-Calculator.debug.xcconfig"; sourceTree = "<group>"; };
+		DAAEC366BA7CD9CE273BEF49 /* Pods_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23C6530F1BB6C4B67E3BD77 /* Pods_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EFAF5E0B8D1A66D2F36A662 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B344EE68ECC9E3D98DD29B9F /* Pods-Calculator.debug.xcconfig */,
+				7C31FAFF50EA08B79E1D0559 /* Pods-Calculator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		835DC8EF23EF36D600DC0490 = {
 			isa = PBXGroup;
 			children = (
 				835DC8FA23EF36D600DC0490 /* Calculator */,
 				835DC8F923EF36D600DC0490 /* Products */,
+				4EFAF5E0B8D1A66D2F36A662 /* Pods */,
+				BB2AC29448F0C3DA3303556B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
+		BB2AC29448F0C3DA3303556B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAAEC366BA7CD9CE273BEF49 /* Pods_Calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 835DC90C23EF36D700DC0490 /* Build configuration list for PBXNativeTarget "Calculator" */;
 			buildPhases = (
+				E545C01E1CDF4864E1DF881E /* [CP] Check Pods Manifest.lock */,
 				835DC8F423EF36D600DC0490 /* Sources */,
 				835DC8F523EF36D600DC0490 /* Frameworks */,
 				835DC8F623EF36D600DC0490 /* Resources */,
@@ -94,7 +120,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "ASN GROUP LLC";
 				TargetAttributes = {
 					835DC8F723EF36D600DC0490 = {
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E545C01E1CDF4864E1DF881E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		835DC8F423EF36D600DC0490 /* Sources */ = {
@@ -192,6 +243,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +304,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -282,10 +335,11 @@
 		};
 		835DC90D23EF36D700DC0490 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B344EE68ECC9E3D98DD29B9F /* Pods-Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3798Z36XLV;
+				DEVELOPMENT_TEAM = KAYWDXS52L;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,10 +354,11 @@
 		};
 		835DC90E23EF36D700DC0490 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C31FAFF50EA08B79E1D0559 /* Pods-Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3798Z36XLV;
+				DEVELOPMENT_TEAM = KAYWDXS52L;
 				INFOPLIST_FILE = Calculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

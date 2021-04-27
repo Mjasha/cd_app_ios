@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AppCenter
+import AppCenterCrashes
 
 class ViewController: UIViewController {
 
@@ -32,6 +34,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        AppCenter.start(withAppSecret: "ce4a638f-c43e-4ba4-b5b8-a9c1c393f464", services:[
+          Crashes.self
+        ])
     }
 
     override func viewDidLayoutSubviews() {
