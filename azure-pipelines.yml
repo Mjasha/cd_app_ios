@@ -39,10 +39,4 @@ jobs:
     displayName: Stage ipa
     inputs:
       contents: '$(BIN_DIR)/*.ipa'
-      targetFolder: '$(build.artifactStagingDirectory)'
-  - task: PublishBuildArtifacts@1
-    displayName: Publish ipa
-    inputs:
-      pathToPublish: '$(build.artifactStagingDirectory)'
-      artifactName: 'drop'
-
+      targetFolder: '$(Agent.BuildDirectory)'
