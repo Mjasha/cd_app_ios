@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     private var resultLabel: UILabel = {
         let label = UILabel()
         label.text = "0"
-        label.textColor = .white
+        label.textColor = .purple
         label.textAlignment = .right
         label.font = UIFont(name: "Helvetica", size: 100)
         return label
