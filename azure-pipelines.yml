@@ -34,6 +34,7 @@ jobs:
       certPwd: '$(p12pass)'
       keychain: 'temp' # Options: default, temp, custom
       deleteCert: true
+      
   - task: CopyFiles@2
     displayName: Stage ipa
     inputs:
