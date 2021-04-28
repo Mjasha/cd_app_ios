@@ -12,23 +12,31 @@ pool:
 variables:
   - group: iOS_calc
 
-steps:
-
-- script: |
-    pod install --project-directory=SwiftCalculator-master
-  displayName: 'Install AppCenter'
-
-- task: Xcode@5
-  inputs:
-    scheme: ''
-    sdk: 'iphoneos'
-    configuration: 'Release'
-    xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+jobs:
+- job: build
+  displayName: Building .ipa
+  steps:
+  - script: pod install --project-directory=SwiftCalculator-master
+    displayName: 'Install AppCenter'
     
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: '$(p12name)'
-    certPwd: '$(p12pass)'
-    keychain: 'temp' # Options: default, temp, custom
-    deleteCert: true
-
+  - task: Xcode@5
+    inputs:
+      xcWorkspacePath: 'SwiftCalculator-master/Calculator.xcworkspace'
+      scheme: 'Calculator'
+      sdk: 'iphoneos'
+      configuration: 'Release'
+      xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
+      
+    
+  - task: InstallAppleCertificate@2
+    inputs:
+      certSecureFile: '$(p12name)'
+      certPwd: '$(p12pass)'
+      keychain: 'temp' # Options: default, temp, custom
+      deleteCert: true
+      
+  - task: CopyFiles@2
+    displayName: Stage ipa
+    inputs:
+      contents: '$(BIN_DIR)/*.ipa'
+      targetFolder: '$(Agent.BuildDirectory)'
